@@ -4,4 +4,6 @@ WORKDIR /app
 
 COPY hello_world/hello.py ./hello.py
 
-CMD ["python", "hello.py"]
+RUN pip install fastapi uvicorn
+
+CMD ["uvicorn", "main:app"]
